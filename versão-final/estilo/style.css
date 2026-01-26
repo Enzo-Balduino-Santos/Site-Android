@@ -31,6 +31,9 @@ body{
     font-family: var(--fonte-padrao);
 }
 
+
+
+
 header{
     background-image: linear-gradient(to bottom, var(--corD), var(--corF));
     min-height: 150px;
@@ -44,6 +47,7 @@ header > h1 {
     margin-bottom: 20px;
     font-size: 3rem;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    font-weight: normal;
 }
 
 header > p {
@@ -54,6 +58,7 @@ header > p {
     padding-inline: 10px;
     margin: auto;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+    padding-bottom: 20px;
 }
 
 nav {
@@ -64,7 +69,7 @@ nav {
 
 nav > a{
     padding: 10px;
-    color: white;
+    color: var(--corB);
     text-decoration: none;
     font-weight: bold;
     transition-duration: 0.5s;
@@ -88,23 +93,116 @@ main {
 
 main h1{
     color: var(--corF);
+    font-size: 1.8rem;
 }
 
 main h1, h2{
     font-family: var(--fonte-android);
+    font-weight: normal;
+  
 }
 
+main h2{
+    color: var(--corE);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--corB), transparent);
+    text-indent: 8px;
+}
+
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong{
+    color: var(--corD);
+    font-weight: bold;
+}
 main img{
     width: 100%;
 }
 
+main a{
+    text-decoration: none;
+    background-color: var(--corB);
+    color: var(--corF);
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--corE);
+}
+
 main img.pequena{
-    width: 50%;
+    max-width: 350px;
     display: block;
     margin: auto;
+}
+
+aside{
+    background-color: var(--corB);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+aside h3{
+    background-color: var(--corE);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    font-family: var(--fonte-android);
+    font-weight: normal;
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+a.externo::after{
+    content: '🔗';
 }
 
 footer{
     background-color: var(--corF);
     color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--corB);
+}
+
+div.video{
+    background-color: var(--corF);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
